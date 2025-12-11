@@ -1,0 +1,27 @@
+title: Interrobang
+tagline: A trivia podcast you can run at home.
+description: Weekly trivia rounds, answer sheets, and home-host party packs.
+
+theme: minima
+
+# Enable collections for episodes
+collections:
+  episodes:
+    output: true
+    permalink: /episodes/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Default applies “layout: default” unless otherwise specified
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "_episodes"
+      type: episodes
+    values:
+      layout: episode
